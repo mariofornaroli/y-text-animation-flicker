@@ -1,0 +1,52 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: 'Sacramento', cursive;
+}
+
+body {
+    width           : 100%;
+    min-height      : 100vh;
+    background-color: #212121;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+h1 {
+    font-size     : 6em;
+    font-style    : italic;
+    color         : #fff6a1;
+    letter-spacing: 7px;
+    text-shadow   :
+        0 0 20px #ffa704,
+        0 0 40px #ffa704,
+        0 0 60px #ff1e00;
+    animation: flicker 6s infinite;
+}
+
+@keyframes flicker {
+
+    15%,
+    20%,
+    50% {
+        color      : #7a7755;
+        text-shadow: none;
+    }
+
+    0%,
+    14%,
+    16%,
+    19%,
+    26%,
+    49%,
+    51%,
+    100% {
+        text-shadow:
+            0 0 20px #ffa704,
+            0 0 40px #ffa704,
+            0 0 60px #ff1e00;
+        color: #fff6a1;
+    }
+}
